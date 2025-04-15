@@ -156,7 +156,7 @@ export default function HuraInteractiveChatbot() {
     
     try {
       // Call your API
-      const response = await fetch('http://localhost:8000/query', {
+      const response = await fetch('https://hurabacked-production.up.railway.app/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
