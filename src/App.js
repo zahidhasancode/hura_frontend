@@ -42,7 +42,7 @@ export default function HuraInteractiveChatbot() {
     } else {
       setMessages([welcomeMessage]);
     }
-  }, []);
+  }, [setCurrentTypingMessage, setMessages, typingEffect]);
 
   // Handle typing effect
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function HuraInteractiveChatbot() {
     if (textToSpeech && messages.length > 0 && !messages[messages.length - 1].isUser && !isSpeaking) {
       speakMessage(messages[messages.length - 1].content);
     }
-  }, [messages, textToSpeech]);
+  }, [messages, textToSpeech, isSpeaking]);
 
   const speakMessage = (text) => {
     if ('speechSynthesis' in window) {
