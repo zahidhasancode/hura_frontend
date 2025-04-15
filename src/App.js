@@ -140,7 +140,7 @@ export default function HuraInteractiveChatbot() {
     e?.preventDefault();
     if (!input.trim() && e) return;
     
-    const query = e ? input : e;
+    // const query = e ? input : e;
     
     // Add user message to chat
     const userMessage = { 
